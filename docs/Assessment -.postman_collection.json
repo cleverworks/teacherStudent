@@ -1,0 +1,703 @@
+{
+	"info": {
+		"_postman_id": "f04d8556-f40e-4387-9721-44927de4c9f1",
+		"name": "Assessment -",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1593551"
+	},
+	"item": [
+		{
+			"name": "Grades",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/grades",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"grades"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": {\n            \"$oid\": \"649c332bd9e72789ee3151ce\"\n        },\n        \"descr\": null,\n        \"title\": \"6\"\n    },\n    {\n        \"_id\": {\n            \"$oid\": \"649c3370d9e7278a42ca69cc\"\n        },\n        \"descr\": null,\n        \"title\": \"6\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"6\",\n    \"descr\":\"6th Grade\",\n    \"metaData\":{\n        \"totalCredits\":16.0,\n        \"Session\":6\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/grades",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"grades"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"6\",\n    \"descr\":\"6th Grade\",\n    \"metaData\":{\n        \"totalCredits\":16.0,\n        \"Session\":6\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"created_at\": \"2023-06-28T18:48:35.612+05:30\",\n    \"descr\": null,\n    \"metaData\": {\n        \"totalCredits\": 16,\n        \"Session\": 6\n    },\n    \"title\": \"6\",\n    \"updated_at\": \"2023-06-28T18:48:35.612+05:30\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"5\",\n    \"descr\":\"5th Grade\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/grades/649c332bd9e72789ee3151ce",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"grades",
+								"649c332bd9e72789ee3151ce"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"6\",\n    \"descr\":\"6th Grade\",\n    \"metaData\":{\n        \"totalCredits\":16.0,\n        \"Session\":6\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"created_at\": \"2023-06-28T18:48:35.612+05:30\",\n    \"descr\": null,\n    \"metaData\": {\n        \"totalCredits\": 16,\n        \"Session\": 6\n    },\n    \"title\": \"6\",\n    \"updated_at\": \"2023-06-28T18:48:35.612+05:30\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subjects",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/subjects",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": {\n            \"$oid\": \"649c332bd9e72789ee3151ce\"\n        },\n        \"descr\": null,\n        \"title\": \"6\"\n    },\n    {\n        \"_id\": {\n            \"$oid\": \"649c3370d9e7278a42ca69cc\"\n        },\n        \"descr\": null,\n        \"title\": \"6\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Science\",\n    \"descr\":\"Science - EVS\",\n    \"grade_id\":\"649c332bd9e72789ee3151ce\",\n    \"credits\":2.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/subjects",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"subjects"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"6\",\n    \"descr\":\"6th Grade\",\n    \"metaData\":{\n        \"totalCredits\":16.0,\n        \"Session\":6\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"created_at\": \"2023-06-28T18:48:35.612+05:30\",\n    \"descr\": null,\n    \"metaData\": {\n        \"totalCredits\": 16,\n        \"Session\": 6\n    },\n    \"title\": \"6\",\n    \"updated_at\": \"2023-06-28T18:48:35.612+05:30\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"metaData\":{\n        \"maxCredits\": 4,\n        \"hours\": 192\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/subjects/649c3471d9e7278ac83cfc3b",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"subjects",
+								"649c3471d9e7278ac83cfc3b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"6\",\n    \"descr\":\"6th Grade\",\n    \"metaData\":{\n        \"totalCredits\":16.0,\n        \"Session\":6\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"created_at\": \"2023-06-28T18:48:35.612+05:30\",\n    \"descr\": null,\n    \"metaData\": {\n        \"totalCredits\": 16,\n        \"Session\": 6\n    },\n    \"title\": \"6\",\n    \"updated_at\": \"2023-06-28T18:48:35.612+05:30\"\n}"
+						},
+						{
+							"name": "Create Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"metaData\":{\n        \"maxCredits\": 4,\n        \"hours\": 192\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/subjects/649c3471d9e7278ac83cfc3b",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"subjects",
+										"649c3471d9e7278ac83cfc3b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c3471d9e7278ac83cfc3b\"\n    },\n    \"created_at\": \"2023-06-28T18:54:01.789+05:30\",\n    \"credits\": 2,\n    \"grade_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"metaData\": {\n        \"maxCredits\": 4,\n        \"hours\": 192\n    },\n    \"title\": \"Science\",\n    \"updated_at\": \"2023-06-28T18:54:56.592+05:30\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Chapters",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/chapters",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"chapters"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "139"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": {\n            \"$oid\": \"649c332bd9e72789ee3151ce\"\n        },\n        \"descr\": null,\n        \"title\": \"6\"\n    },\n    {\n        \"_id\": {\n            \"$oid\": \"649c3370d9e7278a42ca69cc\"\n        },\n        \"descr\": null,\n        \"title\": \"6\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Introduction\",\n    \"descr\":\"Introduction to what we\\'ll learn in the 6th grade this year\",\n    \"subject_id\":\"649c3471d9e7278ac83cfc3b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/chapters",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"chapters"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"6\",\n    \"descr\":\"6th Grade\",\n    \"metaData\":{\n        \"totalCredits\":16.0,\n        \"Session\":6\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"created_at\": \"2023-06-28T18:48:35.612+05:30\",\n    \"descr\": null,\n    \"metaData\": {\n        \"totalCredits\": 16,\n        \"Session\": 6\n    },\n    \"title\": \"6\",\n    \"updated_at\": \"2023-06-28T18:48:35.612+05:30\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"metaData\":{\n        \"maxCredits\": 4,\n        \"hours\": 192\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/subjects/649c3471d9e7278ac83cfc3b",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"subjects",
+								"649c3471d9e7278ac83cfc3b"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"6\",\n    \"descr\":\"6th Grade\",\n    \"metaData\":{\n        \"totalCredits\":16.0,\n        \"Session\":6\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/grades",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"grades"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "203"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"created_at\": \"2023-06-28T18:48:35.612+05:30\",\n    \"descr\": null,\n    \"metaData\": {\n        \"totalCredits\": 16,\n        \"Session\": 6\n    },\n    \"title\": \"6\",\n    \"updated_at\": \"2023-06-28T18:48:35.612+05:30\"\n}"
+						},
+						{
+							"name": "Create Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"metaData\":{\n        \"maxCredits\": 4,\n        \"hours\": 192\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/subjects/649c3471d9e7278ac83cfc3b",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"subjects",
+										"649c3471d9e7278ac83cfc3b"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Content-Length",
+									"value": "252"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": {\n        \"$oid\": \"649c3471d9e7278ac83cfc3b\"\n    },\n    \"created_at\": \"2023-06-28T18:54:01.789+05:30\",\n    \"credits\": 2,\n    \"grade_id\": {\n        \"$oid\": \"649c332bd9e72789ee3151ce\"\n    },\n    \"metaData\": {\n        \"maxCredits\": 4,\n        \"hours\": 192\n    },\n    \"title\": \"Science\",\n    \"updated_at\": \"2023-06-28T18:54:56.592+05:30\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
