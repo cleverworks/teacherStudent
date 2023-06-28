@@ -1,0 +1,10 @@
+development:
+  clients:
+    default:
+      database: learn
+      hosts:
+        - localhost:27017
+        # - nighthackscrumbot.czxh0kv.mongodb.net:27017
+      # options:
+      #   user: driganka
+      #   password: Olav6xyMVwb3XvZa
